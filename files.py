@@ -7,7 +7,7 @@ class files:
         content = ""
         for line in self.file:
             content += line
+        self.file.close()
         return content
 
-    def closeDoc(self):
-        self.file.close()
+

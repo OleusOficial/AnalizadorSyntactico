@@ -1,12 +1,12 @@
 from files import files
-from validator import validator
+from syntax import syntax
 
 file = files()
-validator = validator()
+syn = syntax()
 
 file.openDoc("C:\Users\GO\Documents\Test.java")
 content = file.readDoc()
-validation = validator.validate(content)
+validation = syn.validateSyntax(content)
 
 if validation:
     print "La sintaxis es correcta"
